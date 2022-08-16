@@ -8,7 +8,8 @@ $(document).ready(function () {
 
  
   $(".timeDiv").each(function () {
-    var timeDiv = $(this).attr("id").split("-")[1];
+    var timeDiv = $(this).attr("id").split("r")[1];
+    
     
     if (currentHourContainer === timeDiv) {
       $(this).addClass("present");
@@ -26,7 +27,7 @@ $(document).ready(function () {
   $(".saveButton").click(function (event) {
     event.preventDefault();
     var value = $(this).siblings(".timeBlocks").val();
-    var time = $(this).parent().attr("id").split("-")[1];
+    var time = $(this).parent().attr("id").split("r")[1];
     localStorage.setItem(time, value);
     
   });
@@ -36,3 +37,11 @@ $(document).ready(function () {
 
 $("#hour9 .timeBlocks").val(window.localStorage.getItem("9"));
 $("#hour10 .timeBlocks").val(window.localStorage.getItem("10"));
+$("#hour11 .timeBlocks").val(window.localStorage.getItem("11"));
+$("#hour12 .timeBlocks").val(window.localStorage.getItem("12"));
+$("#hour13 .timeBlocks").val(window.localStorage.getItem("13"));
+$("#hour14 .timeBlocks").val(window.localStorage.getItem("14"));
+$("#hour15 .timeBlocks").val(window.localStorage.getItem("15"));
+$("#hour16 .timeBlocks").val(window.localStorage.getItem("16"));
+$("#hour17 .timeBlocks").val(window.localStorage.getItem("17"));
+$("#hour18 .timeBlocks").val(window.localStorage.getItem("18"));
